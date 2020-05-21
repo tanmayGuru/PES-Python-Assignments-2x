@@ -1,3 +1,71 @@
+Sl No	Topic	Program Assignment
+21	Math and Random Modules	Using the built-in functions on Numbers perform following operations
+a) Round of the given floating point number. Example:  n=0.543 then round it next decimal number, i.e n=1.0 Use round() function
+b) Find out the square root of a given number. (Use sqrt(x) function)
+c) Generate random number between 0, and 1 ( use  random() function)
+d) Generate random number between 10 and  500. (Use uniform() function)
+e) Explore all Math and Random module functions  on a given number/ List.
+22	Math- Trigonometric functions	Read the value x and y from the user and apply all trigonometric functions on these numbers. Note: Refer the tutorial Trigonometric operation table.
+23	Math – math.pi application	Find the area of Circle given that radius of a circle. (Use pi value from Math module as mathematical constant)
+24	Strings	Special Characters: Write program to explore all Escape characters specified in Tutorial (Under String chapter)
+25	Strings	Write a program to print the different data types (Numbers, strings characters) using the Format symbols (Refer to different format symbols specified in Tutorial)
+26	Strings	Receive the encoded string from your friend & decode it to check the original message. PS: You will receive Encoded string and the Algorithm used for encoding.
+27	Strings	Write a program to check given string is Palindrome or not.That is reverse the given string and check whether it is same as original string, if so then it is palindrome.
+Example: String = "malayalam"  reverse string = "malayalam" hence given string is palindrome. Use built functions to check given string is palindrome or not.
+28	Strings	Write a program to check how many ovals present in the given string. That is, count the number of " a e i o u" in the given string and print the numbers against each oval. Example:- "This is Python" Number of total ovals = 3, i = 2, o =1
+29	Strings	Apply all built in functions on Strings in your program. Note: There are 40 string functions. Use Tutorial for the help. Note: Each program should have 5 string built in functions(so write 8 programs to cover all string functions)
+30	Strings	Write a program to Sort given N numbers (Use only loop structures and Conditions to sort the elements. Use Bubble sort / Selection sort technique to sort the elements of List) Note: Don't use built in functions to sort.
+31	Strings	Write a program to search an element in the list. i.e. Perform the binary search on the sorted list having integers as elements. If the search is successful print "Success" else print "un successful search".
+32	Strings	Write a program to perform following operations on List. Create three lists as List1, List2 and List3 having 5 city names each list.
+a. Find the length city of each list element and print city and length
+b. Find the maximum and minimum string length element of each list
+c. Compare each list and determine which city is biggest & smallest with length.
+d. Delete first and last element of each list and print list contents.
+33	Strings	Create a list with 7 elements and perform following operations. Let the list be initialized with List1 any 5 city names;
+a) Append a new city name to the List
+b) Insert a city name at 4th index position
+c) Sort the list and print all elements
+d) Sort the elements of the list in descending order.
+e) delete last three elements using pop operation
+34	Strings	Create 3 Lists (list1, list2, list3) with integer and perform following operations
+a) Create Maxlist by taking 2 maximum elements from each list.
+b) Find average value from all the elements of Maxlist.
+c) Create a MinlIst by taking 2 minimum elements from each list 
+d) Find the average value from all the elements of Minlist
+35	Strings	Create Tuple as specified below;
+a) Create a Tuple tup1 with days in a week & print the tuple elements
+b) Create a Tuple tup2  with months in a year and concatenate it with tup1
+c) Create 3 tuples( tup1,tup2,tup3) with numbers and determine which is greater.
+d) Try to delete an individual element in tup1 and try deleting complete Tuple -tup1 notice the error type you get.
+e) Insert new element in to tuple by typecasting it to List
+36	Strings	Create two tuples tup1 & tup2 and apply all built in functions on tuples. ( Refer Tutorial for the Built in functions list)
+37	Dictionary  and Date & Time	Create 3 dictionaries (dict1, dict2, dict3) with 3 elements each. Perform following operations
+a) Compare dictionaries to determine the biggest.
+b) Add new elements in to the dictionaries dict1, dict2
+c) print the length of dict1, dict2, dict3.
+d) Convert dict1, dict2, and dict3 dictionaries as string and concatenate all strings together.
+38	Dictionary  and Date & Time	Create 2 dictionaries as follows;
+dict1 ={'Name':'Ramakrishna','Age':25}
+dict2={'EmpId':1234,'Salary':5000}
+Perform following operations   
+a) Create single dictionary by merging dict1 and dict2
+b) Update the salary to 10%
+c) Update the age to 26
+d) Insert the new element with key "grade" and assign value as "B1"
+e) Extract and print all values and keys separately.
+f) delete the element with key 'Age' and print dictionary elements.
+39	Dictionary  and Date & Time	Using Time and Calendar module, Print current date and time. Print current month calendar.
+40	Dictionary  and Date & Time	Using time module perform following operations.
+a) Print current time for every 5 seconds up to 1 minute time interval.
+b) Write a program to find out how much CPU time is taken for the execution of above(32.a)  program.
+
+
+
+
+
+
+
+
 '''
 P21
 -------------------------------------------------------------------
