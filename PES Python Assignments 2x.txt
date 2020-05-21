@@ -1,0 +1,475 @@
+'''
+P21
+-------------------------------------------------------------------
+'''
+
+import math
+import random
+
+#a
+n = 0.543
+print(round(n))
+
+#b
+number = float(input("Enter a number: "))
+print(math.sqrt(number))
+
+#c
+print(random.random())
+
+#d
+print(random.uniform(10,500))
+
+
+'''
+P22
+-------------------------------------------------------------------
+'''
+import math
+
+x,y = float(input("Enter x: ")),float(input("Enter y: "))
+print("acos(x):{},acos(y):{}".format(math.acos(x),math.acos(y)))
+
+x,y = float(input("Enter x: ")),float(input("Enter y: "))
+print("asin(x):{},asin(y):{}".format(math.asin(x),math.asin(y)))
+
+x,y = float(input("Enter x: ")),float(input("Enter y: "))
+print("atan(x):{},atan(y):{}".format(math.atan(x),math.atan(y)))
+
+x,y = float(input("Enter x: ")),float(input("Enter y: "))
+print("atan2(y, x):{}".format(math.atan2(y, x)))
+
+x,y = float(input("Enter x: ")),float(input("Enter y: "))
+print("cos(x):{},cos(y):{}".format(math.cos(x),math.cos(y)))
+
+x,y = float(input("Enter x: ")),float(input("Enter y: "))
+print("hypot(x, y):{}".format(math.hypot(x, y)))
+
+x,y = float(input("Enter x: ")),float(input("Enter y: "))
+print("sin(x):{},sin(y):{}".format(math.sin(x),math.sin(y)))
+
+x,y = float(input("Enter x: ")),float(input("Enter y: "))
+print("tan(x):{},tan(y):{}".format(math.tan(x),math.tan(y)))
+
+x,y = float(input("Enter x: ")),float(input("Enter y: "))
+print("degrees(x):{},degrees(y):{}".format(math.degrees(x),math.degrees(y)))
+
+x,y = float(input("Enter x: ")),float(input("Enter y: "))
+print("radians(x):{},radians(y):{}".format(math.radians(x),math.radians(y)))
+
+x,y = float(input("Enter x: ")),float(input("Enter y: "))
+print("acosh(x):{},acosh(y):{}".format(math.acosh(x),math.acosh(y)))
+
+x,y = float(input("Enter x: ")),float(input("Enter y: "))
+print("asinh(x):{},asinh(y):{}".format(math.asinh(x),math.asinh(y)))
+
+x,y = float(input("Enter x: ")),float(input("Enter y: "))
+print("atanh(x):{},atanh(y):{}".format(math.atanh(x),math.atanh(y)))
+
+x,y = float(input("Enter x: ")),float(input("Enter y: "))
+print("cosh(x):{},cosh(y){}".format(math.cosh(x),math.cosh(y)))
+
+x,y = float(input("Enter x: ")),float(input("Enter y: "))
+print("sinh(x):{},sinh(y):{}".format(math.sinh(x),math.sinh(y)))
+
+x,y = float(input("Enter x: ")),float(input("Enter y: "))
+print("tanh(x):{},tanh(y):{}".format(math.tanh(x),math.tanh(y)))
+
+
+'''
+P23
+-------------------------------------------------------------------
+'''
+import math
+
+radius = float(input("Enter the radius of a circle: "))
+area = math.pi*radius**2
+print("Area of the circle with radius {} is {}".format(radius,area))
+
+'''
+P24
+-------------------------------------------------------------------
+'''
+print("apple","orange","grapes")
+print("apple\torange")
+print("apple\norange")
+print("sam\'s")
+print("\"Hello\"")
+print('"\\" is the backslash')
+
+
+'''
+P26
+-------------------------------------------------------------------
+'''
+import codecs
+
+encodingScheme = input("Enter your encoding scheme: ")
+string = b"Sushree"
+encodedString = codecs.encode(string,encodingScheme)
+print("Encoded String: ",encodedString)
+
+print("Decoded String: ",codecs.decode(encodedString,encodingScheme))
+
+
+'''
+P27
+-------------------------------------------------------------------
+'''
+
+string = input("Enter the string to be checked: ")
+if(string == string[::-1]):
+    print("{} is pallindrome".format(string))
+else:
+    print("{} is not pallindrome".format(string))
+
+'''
+P28
+-------------------------------------------------------------------
+'''
+
+string = input("Enter the string: ")
+dictionary = {'a' : 0,'e' : 0,'i' : 0,'o' : 0,'u' : 0}
+for element in string.lower():
+    if element in dictionary:
+        dictionary[element]+=1
+for key,value in dictionary.items():
+    print("{}={}".format(key,value),end=" ")
+
+'''
+P30
+-------------------------------------------------------------------
+'''
+
+N = int(input("Enter the length of list: "))
+List = []
+for i in range(N):
+    number = float(input("Enter your number: "))
+    List.append(number)
+for i in range(N):
+    min_idx = i
+    for j in range(i+1,N):
+        if List[min_idx]>List[j]:
+            min_idx = j
+    List[i],List[min_idx] = List[min_idx],List[i]
+
+print("Sorted List: ")
+for ele in List:
+    print(ele,end = " ")
+
+
+'''
+P31
+-------------------------------------------------------------------
+'''
+
+def bs(A,low,high,key):
+    if A[low]>A[high]:
+        A = A[::-1]
+    while(low<=high):
+        mid = low+(high-low)//2
+        if(A[mid]<key):
+            low = mid+1
+        elif(A[mid]>key):
+            high = mid-1
+        else:
+            return mid
+    return -1
+
+List = list(map(int,input().split()))
+length = len(List)
+print(length)
+key = int(input("Enter the element you want to search: "))
+pos = bs(List,0,length-1,key)
+if pos!=-1:
+    print("Success")
+else:
+    print("Unsuccessful Search")
+
+'''
+P32
+-------------------------------------------------------------------
+'''
+
+List1,List2,List3 = ["Mumbai","Bengaluru","Chennai","Kolkata","Hyderabad"],["Ahmedabad","Jaipur","New Delhi","Kochi","Lucknow"],["Pune","Surat","Chandigarh","Varanasi","Visakhapatnam"]
+
+#a
+for element in List1:
+    print("{}:{}".format(element,len(element)))
+for element in List2:
+    print("{}:{}".format(element,len(element)))
+for element in List3:
+    print("{}:{}".format(element,len(element)))
+
+print("\n")
+#b
+minimum = float("inf")
+maximum = float("-inf")
+for element in List1:
+    if len(element)>=maximum:
+        maximum = len(element)
+        citymaxL1 = element
+    if len(element)<=minimum:
+        minimum = len(element)
+        cityminL1 = element
+print("For List1 maximum and minimum String length element:{}:{},{}:{}".format(citymaxL1,maximum,cityminL1,minimum))
+
+minimum = float("inf")
+maximum = float("-inf")
+for element in List2:
+    if len(element)>=maximum:
+        maximum = len(element)
+        citymaxL2 = element
+    if len(element)<=minimum:
+        minimum = len(element)
+        cityminL2 = element
+print("For List2 maximum and minimum String length element:{}:{},{}:{}".format(citymaxL2,maximum,cityminL2,minimum))
+
+minimum = float("inf")
+maximum = float("-inf")
+for element in List3:
+    if len(element)>=maximum:
+        maximum = len(element)
+        citymaxL3 = element
+    if len(element)<=minimum:
+        minimum = len(element)
+        cityminL3 = element
+print("For List3 maximum and minimum String length element:{}:{},{}:{}".format(citymaxL3,maximum,cityminL3,minimum))
+
+print("\n")
+#c
+minimum = float("inf")
+maximum = float("-inf")
+Biggest = [citymaxL1,citymaxL2,citymaxL3]
+Smallest = [cityminL1,cityminL2,cityminL3]
+for element in Biggest:
+    if len(element)>maximum:
+        citymax = element
+for element in Smallest:
+    if len(element)<minimum:
+        citymin = element
+print("Biggest length city: {},Smallest length city: {}".format(citymax,citymin))
+
+print("\n")
+#d
+del(List1[0],List1[-1],List2[0],List2[-1],List3[0],List3[-1])
+print(List1,List2,List3)
+
+'''
+P33
+-------------------------------------------------------------------
+'''
+
+List = ["Mumbai","Bengaluru","Chennai","Kolkata","Hyderabad"]
+
+#a
+newCity = input("Enter a newcity name: ")
+List.append(newCity)
+print(List)
+
+#b
+List[4] = input("Enter a cityname: ")
+print(List)
+
+#c
+List.sort()
+print(List)
+
+#d
+List.sort(reverse = True)
+print(List)
+
+#e
+List.pop()
+List.pop()
+List.pop()
+print(List)
+
+'''
+P34
+-------------------------------------------------------------------
+'''
+
+
+List1 = [24,56,34,243,5]
+List2 = [345,657,89,4,24]
+List3 = [45,59,790,23,13]
+
+#a
+List1_1 = sorted(List1)
+List2_1 = sorted(List2)
+List3_1 = sorted(List3)
+MaxList = []
+for i in List1_1[-1:-3:-1]:
+    MaxList.append(i)
+for i in List2_1[-1:-3:-1]:
+    MaxList.append(i)
+for i in List3_1[-1:-3:-1]:
+    MaxList.append(i)
+print(MaxList)
+
+#b
+s =  0
+for ele in MaxList:
+    s+=ele
+print("Average: {}".format(s/len(MaxList)))
+
+#c
+List1_2 = sorted(List1)
+List2_2 = sorted(List2)
+List3_2 = sorted(List3)
+MinList = []
+for i in List1_2[1:3]:
+    MinList.append(i)
+for i in List2_2[1:3]:
+    MinList.append(i)
+for i in List3_2[1:3]:
+    MinList.append(i)
+print(MinList)
+
+#d
+s =  0
+for ele in MinList:
+    s+=ele
+print("Average: {}".format(s/len(MinList)))
+
+'''
+P35
+-------------------------------------------------------------------
+'''
+#a
+Tuple1 = ("Sunday","Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday")
+for ele in Tuple1:
+    print(ele)
+
+print("\n")
+#b
+Tuple2 = ("January","February","March","April","May","June","July","August","September","October","November","December")
+for ele in Tuple2:
+    print(ele)
+
+print("\n")
+#c
+print(Tuple1+Tuple2)
+
+#d
+print("\n")
+try:
+    del(Tuple1[1])
+except Exception as e:
+    print(e)
+
+print("\n")
+#e
+L = list(Tuple1)
+L.append("newElement")
+print(L)
+
+'''
+P36
+-------------------------------------------------------------------
+'''
+
+tup1 = ("Sunday","Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday")
+tup2 = ("January","February","March","April","May","June","July","August","September","October","November","December")
+print(tup1.count("Sunday"))
+print(tup2.count("January"))
+print(tup1.index("Thrusday"))
+print(tup2.index("August"))
+
+'''
+P37
+-------------------------------------------------------------------
+'''
+
+#a
+dict1 = {"Name":"Tanya","Age":22,"Gender":"Female","Empid":20081352}
+dict2 = {"Name":"Sanya","Age":25,"Gender":"Female"}
+dict3 = {"Name":"Prayag","Gender":"Male"}
+
+if len(dict1)>len(dict2):
+    if len(dict1)>len(dict3):
+        print("Biggest is dict1 with length: ",len(dict1))
+    else:
+        print("Biggest is dict3 with length: ",len(dict3))
+elif len(dict2)>len(dict3):
+    print("Biggest is dict2 with length: ",len(dict2))
+else:
+    print("Biggest is dict3 with length: ",len(dict3))
+    
+#b
+dict1.update(Account="Visa")
+dict2.update(Account="USBank")
+
+#c
+print("Length of dict1: ",len(dict1))
+print("Length of dict2: ",len(dict2))
+print("Length of dict3: ",len(dict3))
+
+#d
+String1 = str(dict1)
+String2 = str(dict2)
+String3 = str(dict3)
+print(String1+String2+String3)
+
+'''
+P38
+-------------------------------------------------------------------
+'''
+dict1 ={"Name":"Ramakrishna","Age":25}
+dict2={"EmpId":1234,"Salary":5000}
+
+#a
+dict1.update(dict2)
+print(dict1)
+
+#b
+dict1["Salary"] = dict1["Salary"]+(dict1["Salary"]*0.10)
+print(dict1)
+
+#c
+dict1["Age"] = 26
+print(dict1)
+
+#d
+dict1.update(grade = "B1")
+print(dict1)
+
+#e
+for k,v in dict1.items():
+    print("{}={}".format(k,v))
+
+#f
+del(dict1['Age'])
+print(dict1)'''
+
+
+'''
+P39
+-------------------------------------------------------------------
+'''
+
+import calendar
+from datetime import datetime
+
+#a
+print(datetime.now())
+
+#b
+print(calendar.month(2020,4))
+
+
+'''
+P40
+-------------------------------------------------------------------
+'''
+
+import time
+
+strt = time.time()
+for i in range(13):
+    localtime = time.asctime(time.localtime(time.time()))
+    print(localtime)
+    time.sleep(5)
+end = time.time()
+print(end-strt)
